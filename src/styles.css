@@ -136,9 +136,7 @@ button {
 }
 
 .footer {
-    padding-left: 30px;
-    margin: 0 auto;
-text-align: center;
+ padding-left: 150px;
   font-size: 21px;
   color:rgb(183, 204, 187);
 }
