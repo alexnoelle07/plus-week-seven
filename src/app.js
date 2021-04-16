@@ -58,7 +58,6 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 
   forecastHTML = forecastHTML + `
-  <div class="weather-forecast" id="forecast">
                 
                     <div class="col-2">
                         <div class="weather-forecast-date">
