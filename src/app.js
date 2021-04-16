@@ -51,7 +51,7 @@ function showDate() {
 
 // weather forecast
 function displayForecast() {
-  let forecastElement = document.querySelector("forecast");
+  let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = "<div class="row">";
 
