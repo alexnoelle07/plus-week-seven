@@ -49,6 +49,40 @@ function showDate() {
   timeNow.innerHTML = `${hours}:${minutes}`;
 }
 
+// weather forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("forecast");
+
+  let forecastHTML = "<div class="row">";
+
+  forecastElement.innerHTML = forecastHTML;
+
+  forecastHTML = forecastHTML + `
+  <div class="weather-forecast" id="forecast">
+                
+                    <div class="col-2">
+                        <div class="weather-forecast-date">
+                            Thu
+                        </div>
+                        <img 
+                            src="http://openweathermap.org/img/wn/50d@2x.png"
+                            alt=""
+                            width="42"
+                        />
+                        <div class="weather-forecast-temperatures">
+                            <span class="weather-forecast-temperatures-max">18°</span>
+                            <span class="weather-forecast-temperatures-min">12°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            forecastHTML = forecastHTML +`</div>`;
+
+}
+
+displayForecast();
+
 //buttons and search form
 
 let form = document.querySelector("#citySubmit");
