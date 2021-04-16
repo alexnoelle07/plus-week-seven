@@ -22,16 +22,16 @@
   padding-top: 0px;
 }
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color: #fff;
 }
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 30px;
   opacity: 0.5;
 }
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 25px;
 }
 .weather-forecast-temperature-min {
   opacity: 0.5;
