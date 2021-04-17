@@ -133,8 +133,13 @@ button {
   text-align: center;
   color: #fff;
 }
-.enterCity {
+
+::placeholder {
   color: #fff;
+  opacity: 0.5;
+}
+.enterCity {
+  
   background: transparent;
   font-size: 25px;
   margin-top: 20px;
