@@ -81,10 +81,10 @@ function displayForecastCelsius(response) {
           width="42"
         />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max" id="celsius"> ${Math.round(
+          <span class="weather-forecast-temperature-max" id="temperature-unit"> ${Math.round(
             forecastDay.temp.max
           )}° </span>
-          <span class="weather-forecast-temperature-min" id="celsius"> ${Math.round(
+          <span class="weather-forecast-temperature-min" id="temperature-unit"> ${Math.round(
             forecastDay.temp.min
           )}° </span>
         </div>
