@@ -59,7 +59,7 @@ function formatDay(timestamp) {
 }
 
 
-
+//Forecast Celsius
 function displayForecastCelsius(response) {
   let forecast = response.data.daily;
 
@@ -81,10 +81,10 @@ function displayForecastCelsius(response) {
           width="42"
         />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
+          <span class="weather-forecast-temperature-max" id="celsius"> ${Math.round(
             forecastDay.temp.max
           )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
+          <span class="weather-forecast-temperature-min" id="celsius"> ${Math.round(
             forecastDay.temp.min
           )}° </span>
         </div>
@@ -103,6 +103,7 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.
 
 axios.get(apiUrl).then(displayForecastCelsius);
 }
+
 
 
 //buttons and search form
