@@ -1,5 +1,6 @@
 //date and time
 
+showDate();
 function showDate() {
 
   let now = new Date();
@@ -117,7 +118,6 @@ function city(event) {
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = `${city.value}`;
   searchCity(city.value);
-  showDate();
 }
 
 function searchCity(city) {
@@ -157,7 +157,7 @@ function searchLocation(position) {
   let lon = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
-  showDate();
+  
 }
 
 function displayCurrentLocation(event) {
@@ -170,7 +170,7 @@ let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", displayCurrentLocation);
 
 
-//weather conversion
+/*weather conversion
 function changeCelsius(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temperature-unit");
@@ -193,7 +193,69 @@ function changeFahrenheit(event) {
 
 let fahrenheitTemp = document.querySelector("#fahrenheit");
 fahrenheitTemp.addEventListener("click", changeFahrenheit);
+*/
 
+//weather conversion
+function changeCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature-unit");
+  let temperature = tempElement.innerHTML;
+  temperature = Number(temperature);
+  tempElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  let forecastMax = document.querySelectorAll(
+    ".weather-forecast-temperature-max"
+  );
+  forecastMax.forEach(function (item) {
+    // grabbing the current value to convert
+    let currentTemp = item.innerHTML.replace("°", "");
+    // convert to Celsius
+    item.innerHTML = `${Math.round(((currentTemp - 32) * 5) / 9)}°`;
+  });
+  let forecastMin = document.querySelectorAll(
+    ".weather-forecast-temperature-min"
+  );
+  forecastMin.forEach(function (item) {
+    // grabbing the current value to convert
+    let currentTemp = item.innerHTML.replace("°", "");
+    // convert to Celsius
+    item.innerHTML = `${Math.round(((currentTemp - 32) * 5) / 9)}°`;
+  });
+  // to avoid double conversion
+  celsiusTemp.removeEventListener("click", changeCelsius);
+  fahrenheitTemp.addEventListener("click", changeFahrenheit);
+}
+let celsiusTemp = document.querySelector("#celsius");
+celsiusTemp.addEventListener("click", changeCelsius);
+function changeFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature-unit");
+  let temperature = tempElement.innerHTML;
+  temperature = Number(temperature);
+  tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let forecastMax = document.querySelectorAll(
+    ".weather-forecast-temperature-max"
+  );
+  forecastMax.forEach(function (item) {
+    // grabbing the current value to convert
+    let currentTemp = item.innerHTML.replace("°", "");
+    // convert to Fahrenheit
+    item.innerHTML = `${Math.round((currentTemp * 9) / 5 + 32)}°`;
+  });
+  let forecastMin = document.querySelectorAll(
+    ".weather-forecast-temperature-min"
+  );
+  forecastMin.forEach(function (item) {
+    // grabbing the current value to convert
+    let currentTemp = item.innerHTML.replace("°", "");
+    // convert to Fahrenheit
+    item.innerHTML = `${Math.round((currentTemp * 9) / 5 + 32)}°`;
+  });
+  // to avoid double conversion
+  celsiusTemp.addEventListener("click", changeCelsius);
+  fahrenheitTemp.removeEventListener("click", changeFahrenheit);
+}
+let fahrenheitTemp = document.querySelector("#fahrenheit");
+fahrenheitTemp.addEventListener("click", changeFahrenheit);
 
 
 searchCity("San Francisco");

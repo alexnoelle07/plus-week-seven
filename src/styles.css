@@ -1,10 +1,8 @@
-
-
 .container {
   color: fff;
   display: block;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
   background-image: linear-gradient(#63836f, rgb(194, 226, 200));
   border-radius: 10px;
   max-width: 700px;
@@ -17,7 +15,7 @@
   max-width: 80%;
   min-width: 90%;
   font-size: 50px;
-  font-family: 'Josefin Slab', serif;
+  font-family: "Josefin Slab", serif;
   line-height: 1;
   color: #ffffff;
   padding-top: 0px;
@@ -32,7 +30,7 @@
   opacity: 0.5;
 }
 .weather-forecast-temperatures {
-  font-size: 25px;
+  font-size: 20px;
 }
 .weather-forecast-temperature-min {
   opacity: 0.5;
@@ -46,7 +44,7 @@ section {
 a {
   color: #63836f;
   text-decoration: none;
-  font-size: 25px;;
+  font-size: 25px;
 }
 
 a:hover {
@@ -70,10 +68,9 @@ button {
   border-color: rgba(59, 136, 29, 0.3);
   border-radius: 5px 5px 5px;
   box-shadow: 2px 2px 4px #0a4130;
-
 }
 .fas {
-  color:rgb(183, 204, 187)
+  color: rgb(183, 204, 187);
 }
 .col i {
   display: block;
@@ -134,7 +131,6 @@ button {
   opacity: 0.5;
 }
 .enterCity {
-  
   background: transparent;
   font-size: 25px;
   margin-top: 20px;
@@ -152,9 +148,9 @@ button {
 }
 
 .footer {
- text-align: center;
+  text-align: center;
   font-size: 15px;
-  color:rgb(183, 204, 187);
+  color: rgb(183, 204, 187);
 }
 
 .footer-text {
