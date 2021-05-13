@@ -134,6 +134,7 @@ button {
 .enterCity {
   background: transparent;
   font-size: 25px;
+  width: 220px;
   margin-top: 20px;
   border-color: rgba(59, 136, 29, 0.3);
   border-radius: 5px 5px 5px;
@@ -142,6 +143,7 @@ button {
 .submitCity {
   font-size: 25px;
   margin-top: 20px;
+  margin-right: 30px;
   background-color: transparent;
   border-color: rgba(59, 136, 29, 0.3);
   border-radius: 5px 5px 5px;
